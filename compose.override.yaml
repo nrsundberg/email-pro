@@ -4,15 +4,16 @@ services:
   
   rest-api:
     build:
-      dockerfile: dev.Dockerfile
+      dockerfile: new-ui/dev.Dockerfile
     image: rest-api:dev
 
   ui:
-    build: 
-      dockerfile: dev.Dockerfile
+    build:
+      dockerfile: new-ui/dev.Dockerfile
     image: ui:dev
     command: sh -c "npm install && npm run dev"
     volumes:
+      - /app:/app
       - /node_modules
 
   mongo:
