@@ -1,7 +1,8 @@
 import { InputProps } from "@nextui-org/react";
+import { ReactNode } from "react";
 
 export type ContainerProps = {
-  children: JSX.Element;
+  children: ReactNode | ReactNode[];
 };
 
 export type StackProps = {
@@ -9,7 +10,7 @@ export type StackProps = {
   direction?: "rows" | "cols";
   spacing?: number;
   justify?: "center" | "start" | "end" | "around";
-  children: (JSX.Element | null)[];
+  children: (ReactNode | null)[];
 };
 
 export interface AccountInputProps extends InputProps {

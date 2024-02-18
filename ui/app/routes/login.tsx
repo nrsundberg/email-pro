@@ -75,7 +75,7 @@ export default function RouteComponent() {
             Not a member?{" "}
             {
               <Link to="/create" prefetch="intent">
-                Sign up
+                <span className="text-purple-600">Sign up</span>
               </Link>
             }{" "}
             now

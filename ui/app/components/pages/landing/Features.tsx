@@ -1,8 +1,9 @@
-import { Container } from "./Container";
+import { Container } from "~/components/wrappers/Container";
+import { Link } from "@remix-run/react";
 
 export default function Features() {
   return (
-    <div id="features">
+    <div id="features" className="mt-20">
       <Container>
         <div>
           <div className="md:w-2/3 lg:w-1/2">
@@ -20,7 +21,8 @@ export default function Features() {
             </svg>
 
             <h2 className="my-8 text-2xl font-bold text-gray-700 dark:text-white md:text-4xl">
-              A technology-first approach to payments and finance
+              A customer-first approach to{" "}
+              <span className="text-purple-600">AI</span> customer service
             </h2>
             <p className="text-gray-600 dark:text-gray-300">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus ad
@@ -42,11 +44,13 @@ export default function Features() {
 
                 <div className="space-y-2">
                   <h5 className="text-xl font-semibold text-gray-700 dark:text-white transition group-hover:text-secondary">
-                    First feature
+                    Respond to entire thread
                   </h5>
                   <p className="text-gray-600 dark:text-gray-300">
-                    Neque Dolor, fugiat non cum doloribus aperiam voluptates
-                    nostrum.
+                    Utilizing the entire email thread ensures that AI responses
+                    are accurate and tailored to the specific inquiry, enhancing
+                    customer satisfaction and reducing the likelihood of
+                    miscommunication.
                   </p>
                 </div>
                 <a
@@ -81,11 +85,13 @@ export default function Features() {
 
                 <div className="space-y-2">
                   <h5 className="text-xl font-semibold text-gray-700 dark:text-white transition group-hover:text-secondary">
-                    Second feature
+                    Easy-follow up
                   </h5>
                   <p className="text-gray-600 dark:text-gray-300">
-                    Neque Dolor, fugiat non cum doloribus aperiam voluptates
-                    nostrum.
+                    Streamlines communication by enabling the AI to forward
+                    emails to designated personnel, who can effortlessly respond
+                    with a simple "yes" or specify desired changes, simplifying
+                    the process and ensuring swift resolution for customers.
                   </p>
                 </div>
                 <a
@@ -120,11 +126,14 @@ export default function Features() {
 
                 <div className="space-y-2">
                   <h5 className="text-xl font-semibold text-gray-700 dark:text-white transition group-hover:text-secondary">
-                    Third feature
+                    RAG based llm
                   </h5>
                   <p className="text-gray-600 dark:text-gray-300">
-                    Neque Dolor, fugiat non cum doloribus aperiam voluptates
-                    nostrum.
+                    Retrieval Augmented Generation based LLM ensures customers
+                    receive truly accurate information by leveraging advanced
+                    algorithms to retrieve relevant data and generate responses,
+                    enhancing the overall quality and reliability of customer
+                    support interactions.
                   </p>
                 </div>
                 <a
@@ -159,15 +168,16 @@ export default function Features() {
 
                 <div className="space-y-2">
                   <h5 className="text-xl font-semibold text-gray-700 dark:text-white transition group-hover:text-secondary">
-                    More features
+                    Upcoming features
                   </h5>
                   <p className="text-gray-600 dark:text-gray-300">
-                    Neque Dolor, fugiat non cum doloribus aperiam voluptates
-                    nostrum.
+                    Read through our docs with future flags to see what is
+                    coming down the pipeline!
                   </p>
                 </div>
-                <a
-                  href="#"
+                <Link
+                  to="/documentation"
+                  prefetch="intent"
                   className="flex items-center justify-between group-hover:text-secondary"
                 >
                   <span className="text-sm">Read more</span>
@@ -183,7 +193,7 @@ export default function Features() {
                       clipRule="evenodd"
                     />
                   </svg>
-                </a>
+                </Link>
               </div>
             </div>
           </div>

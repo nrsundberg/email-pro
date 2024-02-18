@@ -7,7 +7,7 @@ export default function Stack({
   children
 }: StackProps) {
   const directionalClasses =
-    `grid-${direction}-2 ` + (spacing && `gap-${spacing}`);
+    `grid-${direction}-${children?.length} ` + (spacing && `gap-${spacing}`);
 
   return (
     <div className={`justify-${justify} grid ` + directionalClasses}>

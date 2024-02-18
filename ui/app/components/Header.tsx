@@ -26,17 +26,17 @@ export default function Header(props: HeaderProps) {
       </NavbarBrand>
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
         <NavbarItem>
-          <Link color="foreground" to="/" prefetch="intent">
+          <Link color="foreground" to="/#features" prefetch="intent">
             Features
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link color="foreground" to="/" prefetch="intent">
-            About
+          <Link color="foreground" to="/documentation" prefetch="intent">
+            Docs
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link color="foreground" to="/" prefetch="intent">
+          <Link color="foreground" to="/#integrations">
             Integrations
           </Link>
         </NavbarItem>
