@@ -17,3 +17,8 @@ export interface AccountInputProps extends InputProps {
   formName: string;
   isProtected?: boolean;
 }
+
+export enum HeaderFeatureDisable {
+  LOGIN,
+  SIGNUP
+}

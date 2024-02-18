@@ -5,17 +5,76 @@ import {
   NavbarContent,
   NavbarItem
 } from "@nextui-org/react";
-import Cookies from "js-cookie";
 
 import logo from "../../public/logoForDark.png";
 import { Link } from "@remix-run/react";
+import { HeaderFeatureDisable } from "~/components/types/wrapperTypes";
 
 export type HeaderProps = {
-  disableAccountButtons?: boolean;
+  disableAccountButtons?: HeaderFeatureDisable;
 };
 
 export default function Header(props: HeaderProps) {
-  Cookies.set("userId", "s3cr3t");
+  // Cookies.set("userId", "s3cr3t");
+
+  const ButtonsToDisplay = () => {
+    switch (props.disableAccountButtons) {
+      case HeaderFeatureDisable.LOGIN:
+        return (
+          <NavbarContent justify="end">
+            <NavbarItem>
+              <Button
+                as={Link}
+                color="primary"
+                to="/create"
+                prefetch="intent"
+                variant="flat"
+              >
+                Sign Up
+              </Button>
+            </NavbarItem>
+          </NavbarContent>
+        );
+      case HeaderFeatureDisable.SIGNUP:
+        return (
+          <NavbarContent justify="end">
+            <NavbarItem className="hidden lg:flex">
+              <Button
+                as={Link}
+                color="primary"
+                to="/login"
+                prefetch="intent"
+                variant="flat"
+              >
+                Login
+              </Button>
+            </NavbarItem>
+          </NavbarContent>
+        );
+      default:
+        return (
+          <NavbarContent justify="end">
+            <NavbarItem className="hidden lg:flex">
+              <Link to="/login" prefetch="intent">
+                Login
+              </Link>
+            </NavbarItem>
+
+            <NavbarItem>
+              <Button
+                as={Link}
+                color="primary"
+                to="/create"
+                prefetch="intent"
+                variant="flat"
+              >
+                Sign Up
+              </Button>
+            </NavbarItem>
+          </NavbarContent>
+        );
+    }
+  };
 
   return (
     <Navbar shouldHideOnScroll>
@@ -41,26 +100,7 @@ export default function Header(props: HeaderProps) {
           </Link>
         </NavbarItem>
       </NavbarContent>
-      {props.disableAccountButtons ?? (
-        <NavbarContent justify="end">
-          <NavbarItem className="hidden lg:flex">
-            <Link to="/login" prefetch="intent">
-              Login
-            </Link>
-          </NavbarItem>
-          <NavbarItem>
-            <Button
-              as={Link}
-              color="primary"
-              to="/create"
-              prefetch="intent"
-              variant="flat"
-            >
-              Sign Up
-            </Button>
-          </NavbarItem>
-        </NavbarContent>
-      )}
+      <ButtonsToDisplay />
     </Navbar>
   );
 }

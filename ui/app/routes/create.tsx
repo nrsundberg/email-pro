@@ -5,6 +5,7 @@ import Stack from "~/components/wrappers/Stack";
 import { Form, useActionData } from "@remix-run/react";
 import { AccountInput } from "~/components/wrappers/Inputs";
 import { redirect } from "@remix-run/router";
+import { HeaderFeatureDisable } from "~/components/types/wrapperTypes";
 
 export const meta: MetaFunction = () => {
   return [
@@ -49,7 +50,7 @@ export default function RouteComponent() {
 
   return (
     <>
-      <Header disableAccountButtons={true} />
+      <Header disableAccountButtons={HeaderFeatureDisable.SIGNUP} />
 
       <div className="w-100 h-lvh dark grid grid-cols-2 gap-4">
         <div className="text-center self-center">
