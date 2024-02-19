@@ -1,5 +1,5 @@
 import { Button } from "@nextui-org/react";
-import Header from "~/components/Header";
+import Header from "~/components/pages/app/Header";
 import { ActionFunctionArgs, json, MetaFunction } from "@remix-run/node";
 import { AccountInput } from "~/components/wrappers/Inputs";
 import Stack from "~/components/wrappers/Stack";

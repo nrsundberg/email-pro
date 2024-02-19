@@ -1,8 +1,8 @@
 import type { MetaFunction } from "@remix-run/node";
-import Header from "~/components/Header";
+import Header from "~/components/pages/app/Header";
 import HeroSection from "~/components/pages/landing/HeroSection";
 import Features from "~/components/pages/landing/Features";
-import Footer from "~/components/Footer";
+import Footer from "~/components/pages/app/Footer";
 import Integrations from "~/components/pages/landing/Integrations";
 
 export const meta: MetaFunction = () => {

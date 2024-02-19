@@ -3,7 +3,7 @@ import { Link } from "@remix-run/react";
 
 export default function HeroSection() {
   return (
-    <div className="relative " id="home">
+    <div className="relative" id="home">
       <div
         aria-hidden="true"
         className="absolute inset-0 grid grid-cols-2 -space-x-52 opacity-40 dark:opacity-20"

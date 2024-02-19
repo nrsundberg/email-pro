@@ -5,7 +5,7 @@ import { Container } from "~/components/wrappers/Container";
 
 export default function Integrations() {
   return (
-    <div id="integrations" className="mt-48">
+    <div id="integrations" className="my-48">
       <Container>
         <div>
           <div className="md:w-2/3 lg:w-1/2">

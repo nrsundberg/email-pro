@@ -1,4 +1,4 @@
-import logo from "../../public/logoForDark.png";
+import logo from "../../../../public/logoForDark.png";
 import { Link } from "@remix-run/react";
 import Stack from "~/components/wrappers/Stack";
 import { Button } from "@nextui-org/react";
@@ -6,11 +6,13 @@ import { AccountInput } from "~/components/wrappers/Inputs";
 
 export default function Footer() {
   return (
-    // <footer className="p-4 bg-white sm:p-6 dark:bg-gray-800">
-    <footer className="p-4 sm:p-6 dark mt-48">
+    <footer
+      className="pb-12 z-40 w-full sm:px-6 h-auto data-[menu-open=true]:border-none flex-none inset-x-0
+     backdrop-blur-lg data-[menu-open=true]:backdrop-blur-xl backdrop-saturate-150 bg-background/70"
+    >
       <div className="mx-auto max-w-screen-xl">
         <div className="md:flex md:justify-between">
-          <div className="mb-6 md:mb-0">
+          <div className="mb-6 md:mb-0 mr-10">
             <Stack>
               <Link to="/" className="flex items-center w-fit">
                 <img src={logo} alt="Email Pro logo" className="mr-3 h-12" />

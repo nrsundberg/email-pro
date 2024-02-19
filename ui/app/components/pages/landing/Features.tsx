@@ -3,7 +3,7 @@ import { Link } from "@remix-run/react";
 
 export default function Features() {
   return (
-    <div id="features" className="mt-20">
+    <div id="features" className="mt-48">
       <Container>
         <div>
           <div className="md:w-2/3 lg:w-1/2">
@@ -33,7 +33,7 @@ export default function Features() {
           </div>
           <div className="mt-16 grid divide-x divide-y divide-gray-100 dark:divide-gray-700 overflow-hidden rounded-3xl border border-gray-100 text-gray-600 dark:border-gray-700 sm:grid-cols-2 lg:grid-cols-4 lg:divide-y-0 xl:grid-cols-4">
             <div className="group relative bg-white dark:bg-gray-800 transition hover:z-[1] hover:shadow-2xl hover:shadow-gray-600/10">
-              <div className="relative space-y-8 py-12 p-8">
+              <div className="h-full relative space-y-8 py-12 p-8">
                 <img
                   src="https://cdn-icons-png.flaticon.com/512/4341/4341139.png"
                   className="w-12"
@@ -53,9 +53,10 @@ export default function Features() {
                     miscommunication.
                   </p>
                 </div>
-                <a
-                  href="#"
-                  className="flex items-center justify-between group-hover:text-secondary"
+                <Link
+                  prefetch="intent"
+                  to="/documentation"
+                  className="bottom-0 absolute pb-6 flex items-center justify-between group-hover:text-secondary"
                 >
                   <span className="text-sm">Read more</span>
                   <svg
@@ -70,11 +71,11 @@ export default function Features() {
                       clipRule="evenodd"
                     />
                   </svg>
-                </a>
+                </Link>
               </div>
             </div>
             <div className="group relative bg-white dark:bg-gray-800 transition hover:z-[1] hover:shadow-2xl hover:shadow-gray-600/10">
-              <div className="relative space-y-8 py-12 p-8">
+              <div className="h-full relative space-y-8 py-12 p-8">
                 <img
                   src="https://cdn-icons-png.flaticon.com/512/4341/4341134.png"
                   className="w-12"
@@ -90,13 +91,15 @@ export default function Features() {
                   <p className="text-gray-600 dark:text-gray-300">
                     Streamlines communication by enabling the AI to forward
                     emails to designated personnel, who can effortlessly respond
+                    {/* eslint-disable-next-line react/no-unescaped-entities */}
                     with a simple "yes" or specify desired changes, simplifying
                     the process and ensuring swift resolution for customers.
                   </p>
                 </div>
-                <a
-                  href="#"
-                  className="flex items-center justify-between group-hover:text-secondary"
+                <Link
+                  prefetch="intent"
+                  to="/documentation"
+                  className="bottom-0 absolute pb-6 flex items-center justify-between group-hover:text-secondary"
                 >
                   <span className="text-sm">Read more</span>
                   <svg
@@ -111,11 +114,11 @@ export default function Features() {
                       clipRule="evenodd"
                     />
                   </svg>
-                </a>
+                </Link>
               </div>
             </div>
             <div className="group relative bg-white dark:bg-gray-800 transition hover:z-[1] hover:shadow-2xl hover:shadow-gray-600/10">
-              <div className="relative space-y-8 py-12 p-8">
+              <div className="h-full relative space-y-8 py-12 p-8">
                 <img
                   src="https://cdn-icons-png.flaticon.com/512/4341/4341160.png"
                   className="w-12"
@@ -136,9 +139,10 @@ export default function Features() {
                     support interactions.
                   </p>
                 </div>
-                <a
-                  href="#"
-                  className="flex items-center justify-between group-hover:text-secondary"
+                <Link
+                  to="/documentation"
+                  prefetch="intent"
+                  className="bottom-0 absolute pb-6 flex items-center justify-between group-hover:text-secondary"
                 >
                   <span className="text-sm">Read more</span>
                   <svg
@@ -153,11 +157,11 @@ export default function Features() {
                       clipRule="evenodd"
                     />
                   </svg>
-                </a>
+                </Link>
               </div>
             </div>
             <div className="group relative bg-gray-50 dark:bg-gray-900 transition hover:z-[1] hover:shadow-2xl hover:shadow-gray-600/10">
-              <div className="relative space-y-8 py-12 p-8 transition duration-300 group-hover:bg-white dark:group-hover:bg-gray-800">
+              <div className="h-full relative space-y-8 py-12 p-8 transition duration-300 group-hover:bg-white dark:group-hover:bg-gray-800">
                 <img
                   src="https://cdn-icons-png.flaticon.com/512/4341/4341025.png"
                   className="w-12"
@@ -178,7 +182,7 @@ export default function Features() {
                 <Link
                   to="/documentation"
                   prefetch="intent"
-                  className="flex items-center justify-between group-hover:text-secondary"
+                  className="bottom-0 absolute pb-6 flex items-center justify-between group-hover:text-secondary"
                 >
                   <span className="text-sm">Read more</span>
                   <svg
