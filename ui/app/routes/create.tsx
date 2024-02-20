@@ -6,6 +6,8 @@ import { Form, useActionData } from "@remix-run/react";
 import { AccountInput } from "~/components/wrappers/Inputs";
 import { redirect } from "@remix-run/router";
 import { HeaderFeatureDisable } from "~/components/types/wrapperTypes";
+import { SignUp } from "@clerk/remix";
+import { createClerkClient } from '@clerk/remix/api.server';
 
 export const meta: MetaFunction = () => {
   return [
@@ -40,6 +42,8 @@ export async function action({ request }: ActionFunctionArgs) {
   if (Object.keys(errors).length > 0) {
     return json({ errors });
   }
+
+  await createClerkClient({}).users.createUser
 
   // Redirect to dashboard if validation is successful
   return redirect("/home");
@@ -95,6 +99,9 @@ export default function RouteComponent() {
             </Button>
           </Form>
         </div>
+
+      <SignUp />
+
       </div>
     </>
   );
