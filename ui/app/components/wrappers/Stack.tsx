@@ -1,4 +1,4 @@
-import { StackProps } from "../types/wrapperTypes";
+import { StackProps } from "types/wrapperTypes";
 
 export default function Stack({
   direction = "rows",

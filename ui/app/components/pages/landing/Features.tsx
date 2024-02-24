@@ -1,4 +1,5 @@
-import { Container } from "~/components/wrappers/Container";
+import { Container } from "wrappers/Container";
+
 import { Link } from "@remix-run/react";
 
 export default function Features() {

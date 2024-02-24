@@ -1,8 +1,11 @@
-import logo from "../../../../public/logoForDark.png";
 import { Link } from "@remix-run/react";
-import Stack from "~/components/wrappers/Stack";
+
 import { Button } from "@nextui-org/react";
-import { AccountInput } from "~/components/wrappers/Inputs";
+
+import logo from "@public/logoForDark.png";
+
+import Stack from "wrappers/Stack";
+import { AccountInput } from "wrappers/Inputs";
 
 export default function Footer() {
   return (

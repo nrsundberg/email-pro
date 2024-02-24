@@ -1,5 +1,7 @@
 import { Link } from "@remix-run/react";
+
 import { Divider } from "@nextui-org/react";
+
 import { camelCaseToUserFacingName } from "~/components/appUtils";
 
 export default function SideBar() {
@@ -11,6 +13,7 @@ export default function SideBar() {
       "RAG Based AI"
     ],
     languageModeling: ["LLM", "context", "RAG-in-depth"],
+    workflow: ["Human in the Loop", "Change Response", "Time Delay"],
     questions: ["FAQ's", "Contact Us"]
   };
 
@@ -23,9 +26,9 @@ export default function SideBar() {
               {camelCaseToUserFacingName(grp[0])}
             </h4>
             <Divider />
-            <ul>
+            <ul className="list-inside">
               {grp[1].map((tle) => (
-                <li key={tle}>
+                <li key={tle} className="list-disc">
                   <Link
                     prefetch="intent"
                     className="hover:underline"
@@ -41,6 +44,4 @@ export default function SideBar() {
       })}
     </div>
   );
-
-  // );
 }

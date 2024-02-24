@@ -1,4 +1,4 @@
-import { Container } from "~/components/wrappers/Container";
+import { Container } from "wrappers/Container";
 
 export default function Stats() {
   return (

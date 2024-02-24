@@ -1,4 +1,4 @@
-import { ContainerProps } from "../types/wrapperTypes";
+import { ContainerProps } from "types/wrapperTypes";
 
 export function Container({ ...props }: ContainerProps) {
   return (

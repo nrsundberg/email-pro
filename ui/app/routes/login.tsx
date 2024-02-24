@@ -1,11 +1,13 @@
 import { Button } from "@nextui-org/react";
-import Header from "~/components/pages/app/Header";
+
 import { ActionFunctionArgs, json, MetaFunction } from "@remix-run/node";
-import { AccountInput } from "~/components/wrappers/Inputs";
-import Stack from "~/components/wrappers/Stack";
 import { Form, Link, useActionData } from "@remix-run/react";
 import { redirect } from "@remix-run/router";
-import { HeaderFeatureDisable } from "~/components/types/wrapperTypes";
+
+import Header from "pages/app/Header";
+import { AccountInput } from "wrappers/Inputs";
+import Stack from "wrappers/Stack";
+import { HeaderFeatureDisable } from "types/wrapperTypes";
 
 export const meta: MetaFunction = () => {
   return [

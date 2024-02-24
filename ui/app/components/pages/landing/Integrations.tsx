@@ -1,7 +1,8 @@
-import outlookLogo from "../../../../public/outlookLogo.png";
-import gmailLogo from "../../../../public/gmailIcon.svg.png";
-import resova from "../../../../public/resova_logo_main.svg";
-import { Container } from "~/components/wrappers/Container";
+import outlookLogo from "@public/outlookLogo.png";
+import gmailLogo from "@public/gmailIcon.svg.png";
+import resova from "@public/resova_logo_main.svg";
+
+import { Container } from "wrappers/Container";
 
 export default function Integrations() {
   return (

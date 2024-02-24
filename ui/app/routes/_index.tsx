@@ -1,9 +1,12 @@
 import type { MetaFunction } from "@remix-run/node";
-import Header from "~/components/pages/app/Header";
-import HeroSection from "~/components/pages/landing/HeroSection";
-import Features from "~/components/pages/landing/Features";
-import Footer from "~/components/pages/app/Footer";
-import Integrations from "~/components/pages/landing/Integrations";
+
+import { AppPage } from "wrappers/App";
+
+import Header from "pages/app/Header";
+import HeroSection from "pages/landing/HeroSection";
+import Features from "pages/landing/Features";
+import Footer from "pages/app/Footer";
+import Integrations from "pages/landing/Integrations";
 
 export const meta: MetaFunction = () => {
   return [
@@ -14,14 +17,12 @@ export const meta: MetaFunction = () => {
 
 export default function App() {
   return (
-    <>
+    <AppPage>
       <Header />
-      <div className="dark">
-        <HeroSection />
-        <Features />
-        <Integrations />
-      </div>
+      <HeroSection />
+      <Features />
+      <Integrations />
       <Footer />
-    </>
+    </AppPage>
   );
 }

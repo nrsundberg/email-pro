@@ -1,13 +1,16 @@
 import { Button } from "@nextui-org/react";
-import Header from "~/components/pages/app/Header";
+
 import { ActionFunctionArgs, json, MetaFunction } from "@remix-run/node";
-import Stack from "~/components/wrappers/Stack";
 import { Form, useActionData } from "@remix-run/react";
-import { AccountInput } from "~/components/wrappers/Inputs";
 import { redirect } from "@remix-run/router";
-import { HeaderFeatureDisable } from "~/components/types/wrapperTypes";
+
+import Stack from "wrappers/Stack";
+import { AccountInput } from "wrappers/Inputs";
+import Header from "pages/app/Header";
+import { HeaderFeatureDisable } from "types/wrapperTypes";
+
 import { SignUp } from "@clerk/remix";
-import { createClerkClient } from '@clerk/remix/api.server';
+import { createClerkClient } from "@clerk/remix/api.server";
 
 export const meta: MetaFunction = () => {
   return [
@@ -43,7 +46,7 @@ export async function action({ request }: ActionFunctionArgs) {
     return json({ errors });
   }
 
-  await createClerkClient({}).users.createUser
+  await createClerkClient({}).users.createUser;
 
   // Redirect to dashboard if validation is successful
   return redirect("/home");
@@ -100,8 +103,7 @@ export default function RouteComponent() {
           </Form>
         </div>
 
-      <SignUp />
-
+        <SignUp />
       </div>
     </>
   );

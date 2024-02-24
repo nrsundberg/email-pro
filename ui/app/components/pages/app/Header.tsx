@@ -6,9 +6,11 @@ import {
   NavbarItem
 } from "@nextui-org/react";
 
-import logo from "../../../../public/logoForDark.png";
 import { Link } from "@remix-run/react";
-import { HeaderFeatureDisable } from "~/components/types/wrapperTypes";
+
+import logo from "@public/logoForDark.png";
+
+import { HeaderFeatureDisable } from "types/wrapperTypes";
 
 export type HeaderProps = {
   disableAccountButtons?: HeaderFeatureDisable;

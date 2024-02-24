@@ -1,8 +1,11 @@
 import type { MetaFunction } from "@remix-run/node";
-import Header from "~/components/pages/app/Header";
-import SideBar from "~/components/pages/docs/SideBar";
-import GeneralAppPage from "~/components/wrappers/GeneralAppPage";
-import Footer from "~/components/pages/app/Footer";
+
+import Header from "pages/app/Header";
+import SideBar from "pages/docs/SideBar";
+import Footer from "pages/app/Footer";
+import { AppPage, PageMainContent } from "wrappers/App";
+
+import Topic from "~/routes/documentation.$topic";
 
 export const meta: MetaFunction = () => {
   return [
@@ -13,16 +16,17 @@ export const meta: MetaFunction = () => {
 
 export default function RouterComponent() {
   return (
-    <div className="h-screen">
+    <AppPage>
       <Header />
-      <GeneralAppPage>
+      <PageMainContent>
         <div className="grid grid-cols-2 text-left mb-40">
           <SideBar />
           {/*TODO make this nested route loading by query param*/}
-          <h4>Docs page</h4>
+          <Topic />
         </div>
-      </GeneralAppPage>
+      </PageMainContent>
+
       <Footer />
-    </div>
+    </AppPage>
   );
 }

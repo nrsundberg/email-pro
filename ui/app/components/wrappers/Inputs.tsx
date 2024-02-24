@@ -1,7 +1,9 @@
-import { Input } from "@nextui-org/react";
-import { AccountInputProps } from "~/components/types/wrapperTypes";
 import React from "react";
+
+import { Input } from "@nextui-org/react";
 import { EyeFilledIcon, EyeSlashFilledIcon } from "@nextui-org/shared-icons";
+
+import { AccountInputProps } from "types/wrapperTypes";
 import { camelCaseToUserFacingName } from "~/components/appUtils";
 
 export function AccountInput({ ...props }: AccountInputProps) {

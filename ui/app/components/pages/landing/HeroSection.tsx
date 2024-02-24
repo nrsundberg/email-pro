@@ -1,5 +1,6 @@
-import { Container } from "~/components/wrappers/Container";
 import { Link } from "@remix-run/react";
+
+import { Container } from "wrappers/Container";
 
 export default function HeroSection() {
   return (
